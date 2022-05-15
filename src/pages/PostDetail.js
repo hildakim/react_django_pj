@@ -40,7 +40,7 @@ const PostDetail = () => {
   return (<div>
     <h2>PostDetail</h2>
     <Button type="primary" danger onClick={deletePost}>
-      삭제!
+      삭제
     </Button>
     <Button type="primary" href={`/post/${id}/update`}>
       수정
@@ -48,9 +48,11 @@ const PostDetail = () => {
     {loading ? "loading.." : 
       <div>
         <div>
-          <h3>{post.title}</h3>
-          <p>{post.content}</p>
-          <p>{post.user}</p>
+          <h3>제목:{post.title}</h3>
+          <hr />
+          <p>내용:{post.content}</p>
+          <hr />
+          <p>글쓴이:{post.user}</p>
           <p>최근 수정:{post.updatedAt}</p>
           <p>등록일: {post.createdAt}</p>
         </div>
